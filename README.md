@@ -12,4 +12,4 @@ A simple, interactive web tool that lets you convert between **place names** and
 - 🧠 Built using HTML, CSS, and JavaScript only — no frameworks
 
 ## Link
-[text](https://geoloccode.netlify.app/)
+[GeoLocCode](https://geoloccode.netlify.app/)
