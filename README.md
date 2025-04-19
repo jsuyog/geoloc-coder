@@ -10,3 +10,6 @@ A simple, interactive web tool that lets you convert between **place names** and
 - 📋 **Copy to clipboard** functionality
 - 🔁 **Switch search modes** directly from results
 - 🧠 Built using HTML, CSS, and JavaScript only — no frameworks
+
+## Link
+[text](https://geoloccode.netlify.app/)
