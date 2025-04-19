@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geocoder</title>
+    <style src="index.css"></style>
+</head>
+<body>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <div class="container">
+        <h1>Two-Way Geocoding Tool</h1>
+        <p class="subtitle">Convert between place names and geographic coordinates</p>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="openTab(event, 'forwardTab')">Place → Coordinates</div>
+            <div class="tab" onclick="openTab(event, 'reverseTab')">Coordinates → Place</div>
+        </div>
+        
+        <div id="forwardTab" class="tab-content active">
+            <h2>Find Coordinates from Place Name</h2>
+            <p>Enter any city, village, or address to get its geographic coordinates</p>
+            
+            <div class="input-group">
+                <input type="text" id="placeInput" placeholder="Enter a place name (e.g., Paris, France)">
+                <button onclick="findCoordinates()">Search</button>
+            </div>
+            
+            <div id="loading" class="loading">Searching...</div>
+            <div id="error" class="error"></div>
+            <div id="result"></div>
+        </div>
+        
+        <div id="reverseTab" class="tab-content">
+            <h2>Find Place from Coordinates</h2>
+            <p>Enter latitude and longitude to find the corresponding location</p>
+            
+            <div class="coords-input-group">
+                <input type="text" id="latInput" placeholder="Latitude (e.g., 48.8566)">
+                <input type="text" id="lonInput" placeholder="Longitude (e.g., 2.3522)">
+                <button onclick="findPlace()">Locate</button>
+            </div>
+            
+            <div id="reverseLoading" class="reverseLoading">Searching...</div>
+            <div id="reverseError" class="reverseError"></div>
+            <div id="reverseResult"></div>
+        </div>
+        
+        <footer>
+            Powered by OpenStreetMap Nominatim API
+        </footer>
+    </div>
+</body>
+</html>
